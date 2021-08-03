@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+}
+
+header {
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
+    background-color: red;
+    width: 100%;
+}
+
+.logo {
+    margin: 1.5em;
+}
+
+button {
+    border: none;
+    border: 2px solid;
+    border-radius: 20px;
+}
+
+.menu {
+    flex: ;
+    margin: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.sign {
+    display: flex;
+}
+
+.sign * {
+    margin: auto 1em;
+}
+
+.burger {
+    margin-right: 2em;
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 4px;
+    background-color: royalblue;
+    margin: 5px;
+}
+
+@media screen and (max-width: 767px) {
+    .burger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+}
