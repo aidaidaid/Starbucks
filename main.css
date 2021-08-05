@@ -15,7 +15,7 @@ a {
     text-decoration: none;
 }
 
-img {
+header img {
     width: 50px;
     height: 50px;
 }
@@ -24,13 +24,14 @@ header {
     display: flex;
     align-items: center;
     background-color: #ffffff;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .logo {
     margin: 1%;
-    width: 2rem;
+    margin-left: 0;
+    width: 2%;
 }
 
 button {
@@ -60,8 +61,15 @@ nav a {
     margin: 3%;
 }
 
-.sign {
+.sign,
+.sign a {
     display: flex;
+    align-items: center;
+}
+
+.sign img {
+    width: 20px;
+    height: 26px;
 }
 
 .sign * {
@@ -119,19 +127,24 @@ nav a {
 }
 
 #main section {
-    margin: 0;
+    margin: 0 5%;
 }
 
 .mask {
     background-color: #d8e8e3;
     height: 162px;
     font-size: 19px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 32px 0;
 }
 
-.mask .block {
+.mask-inner {
+    position: relative;
+    max-width: 60%;
     text-align: center;
-    margin: 0 auto;
-    padding: 3.2rem 10rem;
+    margin: auto;
 }
 
 #block {
@@ -149,7 +162,7 @@ nav a {
     align-items: flex-start;
     background-color: #1e3932;
     width: 50%;
-    height: 625px;
+    /*height: 625px;*/
     padding: 32px 48px;
 }
 
@@ -157,6 +170,8 @@ nav a {
     text-align: center;
     padding: 50px;
 }
+
+
 
 #blocks1 p {
     margin: 0;
@@ -184,14 +199,10 @@ nav a {
 .black-border-btn {
     color: #1e3932;
     border-color: #1e3932;
-    ;
-
 }
 
 #blocks img {
     width: 50%;
-    height: 625px;
-
 }
 
 .light {
@@ -213,12 +224,14 @@ nav a {
 
 .card-inner {
     background-color: #d4e9e2;
+    text-align: center;
+    padding: 20px;
 }
 
 #game-rules {
     text-align: center;
     font-size: 14px;
-    border-bottom-style: 2px solid grey;
+    border-bottom-style: 12px solid grey;
 }
 
 #game-rules a {
@@ -227,7 +240,7 @@ nav a {
 
 #game-rules div {
     margin: 32px auto;
-
+    border-bottom-style: 12px solid grey;
 }
 
 #bottom-menu {
