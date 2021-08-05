@@ -15,6 +15,14 @@ a {
     text-decoration: none;
 }
 
+a:visited {
+    color: #000;
+}
+
+#bottom-menu button {
+    display: none;
+}
+
 header img {
     width: 50px;
     height: 50px;
@@ -31,18 +39,15 @@ header {
 .logo {
     margin: 1%;
     margin-left: 0;
-    width: 2%;
 }
 
-button {
-    border: none;
-    border: 2px solid;
-    border-radius: 20px;
+.logo img {
+    width: 70px;
+    height: 70px;
 }
 
 .menu {
     flex: 1;
-    margin: 3%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,12 +72,34 @@ nav a {
     align-items: center;
 }
 
+svg {
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    overflow: visible;
+    fill: #000;
+}
+
+svg:hover,
+.location:hover {
+    fill: #009100;
+    transition: fill, 0.3s ease-in-out;
+}
+
+.location {
+    margin: 1rem;
+}
+
+path {
+    margin-right: 5px;
+}
+
 .sign img {
     width: 20px;
     height: 26px;
 }
 
-.sign * {
+.sign-btn {
     margin: auto 1rem;
 }
 
@@ -104,15 +131,11 @@ nav a {
 .burger div {
     width: 25px;
     height: 4px;
-    background-color: royalblue;
+    background-color: #000;
     margin: 5px;
 }
 
-@media screen and (max-width: 767px) {
-    body {
-        font-size: 1.4rem;
-    }
-
+@media screen and (max-width: 788px) {
     .burger {
         display: block;
 
@@ -126,17 +149,15 @@ nav a {
     }
 }
 
-#main section {
+#main {
     margin: 0 5%;
 }
 
 .mask {
     background-color: #d8e8e3;
-    height: 162px;
     font-size: 19px;
     display: flex;
     text-align: center;
-    justify-content: center;
     padding: 32px 0;
 }
 
@@ -147,30 +168,47 @@ nav a {
     margin: auto;
 }
 
-#block {
+.mask a,
+#game-rules a {
+    text-decoration: underline;
+}
+
+.mask a:hover,
+#game-rules a {
+    text-decoration: none;
+}
+
+.block {
     margin: 2rem 0;
     color: #fff;
     display: flex;
+    background-color: #1e3932;
 }
 
 .inner {
     align-items: center;
     vertical-align: middle;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-color: #1e3932;
-    width: 50%;
-    /*height: 625px;*/
-    padding: 32px 48px;
+    /*padding: 32px 48px;*/
 }
 
 .inner div {
     text-align: center;
-    padding: 50px;
+    padding: 32px 48px;
 }
 
+.block-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.block-img img {
+    max-width: 100%;
+}
 
 
 #blocks1 p {
@@ -201,8 +239,16 @@ nav a {
     border-color: #1e3932;
 }
 
-#blocks img {
-    width: 50%;
+.play-now:visited,
+.learn-more:visited {
+    color: #fff;
+}
+
+.play-now:hover,
+.learn-more:hover,
+.black-border-btn:hover {
+    opacity: 0.7;
+    filter: contrast(1.5);
 }
 
 .light {
@@ -225,11 +271,12 @@ nav a {
 .card-inner {
     background-color: #d4e9e2;
     text-align: center;
-    padding: 20px;
+    padding: 0 40px 32px 40px;
 }
 
 #game-rules {
     text-align: center;
+    font-size: 14px;
     font-size: 14px;
     border-bottom-style: 12px solid grey;
 }
@@ -249,9 +296,19 @@ nav a {
 }
 
 #bottom-menu div {
-    max-width: 190px;
     margin-right: 50px;
 }
+
+#bottom-menu button {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url(images/down-arrow.svg);
+}
+
 
 #bottom-menu div * {
     margin-bottom: 25px;
@@ -259,13 +316,11 @@ nav a {
 
 #bottom-menu p {
     font-size: 19px;
-
 }
 
 #bottom-menu a {
     display: block;
     font-size: 14px;
-
 }
 
 hr {
@@ -288,12 +343,16 @@ footer img {
     margin: 30px 5px;
 }
 
-footer a {
-    font-size: 16px;
+footer img:hover {
+    border-radius: 50%;
+    box-shadow: 0 0 7px 7px rgba(153, 148, 148, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
-footer p {
-    font-size: 14px;
+.arrow:hover {
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px rgba(153, 148, 148, 0.3);
+    transition: box-shadow 0.1s ease-out;
 }
 
 .vl {
@@ -301,4 +360,136 @@ footer p {
     margin: 10px;
     border-left: 2px solid green;
     height: 16px;
+}
+
+.menu,
+.game-rules,
+#copyright {
+    font-size: 14px;
+}
+
+.blocks a,
+#cards a,
+#bottom-menu a {
+    font-size: 16px;
+}
+
+.mask,
+#bottom-menu p,
+.f19 {
+    font-size: 19px;
+}
+
+.f24 {
+    font-size: 24px;
+}
+
+.f50 {
+    font-size: 50px;
+}
+
+@media screen and (max-width: 1439px) {
+    #main {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .inner div {
+        padding: 32px 40px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .inner div {
+        padding: 32px 24px;
+    }
+
+    .card-inner {
+        padding: 0 24px 32px 24px;
+    }
+
+    #bottom-menu a {
+        display: none;
+    }
+
+    #bottom-menu {
+        flex-direction: column;
+    }
+
+    #bottom-menu button {
+        display: inline-block;
+        margin: auto 0 auto;
+        border-radius: 50%;
+    }
+
+    #bottom-menu div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #bottom-menu div * {
+        margin-bottom: 0;
+
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .column {
+        flex-direction: column;
+    }
+
+    .column-reverse {
+        flex-direction: column-reverse;
+    }
+
+    #cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .inner div {
+        padding: 32px 16px;
+    }
+
+    .card-inner {
+        padding: 0 16px 32px 16px;
+    }
+
+    .game-rules,
+    #copyright {
+        font-size: 13px;
+    }
+
+    .blocks a,
+    #cards a {
+        font-size: 14px;
+    }
+
+    .mask,
+    #bottom-menu p,
+    .f19 {
+        font-size: 16px;
+    }
+
+    .f24 {
+        font-size: 22px;
+    }
+
+    .f50 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 373px) {
+    .f24 {
+        font-size: 19px;
+    }
+
+    .f50 {
+        font-size: 24px;
+    }
 }
