@@ -1,14 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
 
 body {
     margin: 0;
     font-family: 'Atkinson Hyperlegible', sans-serif;
-    /*font-family: 'Maven Pro', sans-serif;*/
-    /*font-family: 'Spartan', sans-serif;
-    /* font-weight: bold;*/
 }
 
 a {
@@ -51,7 +45,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
+    font-weight: bold;
     white-space: nowrap;
 }
 
@@ -59,11 +53,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 nav a {
     margin: 3%;
+}
+
+nav a:hover {
+    color: #009100;
 }
 
 .sign,
@@ -80,8 +77,9 @@ svg {
     fill: #000;
 }
 
-svg:hover,
+.location svg:hover,
 .location:hover {
+    color: #009100;
     fill: #009100;
     transition: fill, 0.3s ease-in-out;
 }
@@ -114,7 +112,6 @@ path {
     font-weight: 600;
     line-height: 1.2;
     text-align: center;
-    -webkit-transition: all .2s ease;
     transition: all .2s ease;
 }
 
@@ -128,32 +125,15 @@ path {
     display: none;
 }
 
-.burger div {
-    width: 25px;
-    height: 4px;
-    background-color: #000;
-    margin: 5px;
-}
-
-@media screen and (max-width: 788px) {
-    .burger {
-        display: block;
-
-        position: absolute;
-        right: 0;
-        width: 44px;
-    }
-
-    .menu {
-        display: none;
-    }
+.burger svg circle:hover {
+    background-color: black;
 }
 
 #main {
     margin: 0 5%;
 }
 
-.mask {
+.covid {
     background-color: #d8e8e3;
     font-size: 19px;
     display: flex;
@@ -161,20 +141,21 @@ path {
     padding: 32px 0;
 }
 
-.mask-inner {
+.covid-inner {
     position: relative;
     max-width: 60%;
     text-align: center;
     margin: auto;
 }
 
-.mask a,
-#game-rules a {
+.covid a,
+#game-rules a,
+footer a:hover {
     text-decoration: underline;
 }
 
-.mask a:hover,
-#game-rules a {
+.covid a:hover,
+#game-rules a:hover {
     text-decoration: none;
 }
 
@@ -191,7 +172,6 @@ path {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /*padding: 32px 48px;*/
 }
 
 .inner div {
@@ -210,11 +190,6 @@ path {
     max-width: 100%;
 }
 
-
-#blocks1 p {
-    margin: 0;
-}
-
 .play-now,
 .learn-more,
 .black-border-btn {
@@ -230,7 +205,6 @@ path {
     font-weight: 600;
     line-height: 1.2;
     text-align: center;
-    -webkit-transition: all .2s ease;
     transition: all .2s ease;
 }
 
@@ -246,7 +220,8 @@ path {
 
 .play-now:hover,
 .learn-more:hover,
-.black-border-btn:hover {
+.black-border-btn:hover,
+.sign-btn:hover {
     opacity: 0.7;
     filter: contrast(1.5);
 }
@@ -265,7 +240,19 @@ path {
 .card {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 50%;
+}
+
+.card1 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 16px;
+}
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
 }
 
 .card-inner {
@@ -276,9 +263,7 @@ path {
 
 #game-rules {
     text-align: center;
-    font-size: 14px;
-    font-size: 14px;
-    border-bottom-style: 12px solid grey;
+    border-bottom: 1px solid rgb(100, 100, 100);
 }
 
 #game-rules a {
@@ -287,12 +272,10 @@ path {
 
 #game-rules div {
     margin: 32px auto;
-    border-bottom-style: 12px solid grey;
 }
 
 #bottom-menu {
     display: flex;
-    padding: 0 24px;
 }
 
 #bottom-menu div {
@@ -309,7 +292,6 @@ path {
     background-image: url(images/down-arrow.svg);
 }
 
-
 #bottom-menu div * {
     margin-bottom: 25px;
 }
@@ -320,17 +302,11 @@ path {
 
 #bottom-menu a {
     display: block;
-    font-size: 14px;
+    color: rgba(0,0,0,.56);
 }
 
-hr {
-    display: block;
-    border: none;
-    background-color: : rgba(0, 0, 0, .1);
-    width: 80%;
-    width: 70vw;
-    height: 2px;
-    margin-bottom: 55px;
+#bottom-menu a:hover {
+    color: #000;
 }
 
 footer {
@@ -341,6 +317,7 @@ footer img {
     width: 35px;
     height: 35px;
     margin: 30px 5px;
+    cursor: pointer;
 }
 
 footer img:hover {
@@ -358,8 +335,12 @@ footer img:hover {
 .vl {
     display: inline;
     margin: 10px;
-    border-left: 2px solid green;
+    border-left: 2px solid #000;
     height: 16px;
+}
+
+#copyright {
+    color: rgba(0,0,0,.56);
 }
 
 .menu,
@@ -374,7 +355,7 @@ footer img:hover {
     font-size: 16px;
 }
 
-.mask,
+.covid,
 #bottom-menu p,
 .f19 {
     font-size: 19px;
@@ -391,6 +372,10 @@ footer img:hover {
 @media screen and (max-width: 1439px) {
     #main {
         margin: 0;
+    }
+
+    #bottom-menu {
+        padding: 24px;
     }
 }
 
@@ -426,17 +411,46 @@ footer img:hover {
     #bottom-menu div {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 16px;
     }
 
     #bottom-menu div * {
         margin-bottom: 0;
+    }
 
+    .vl {
+        display: none;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links a {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width: 788px) {
+    .burger {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        width: 44px;
+    }
+
+    .menu {
+        display: none;
     }
 }
 
 @media screen and (max-width: 767px) {
     .column {
         flex-direction: column;
+        -ms-flex-direction: column;
     }
 
     .column-reverse {
@@ -445,6 +459,10 @@ footer img:hover {
 
     #cards {
         flex-direction: column;
+    }
+
+    .card:first-child {
+        margin-bottom: 2rem;
     }
 
     .card {
@@ -459,6 +477,14 @@ footer img:hover {
         padding: 0 16px 32px 16px;
     }
 
+    .card1 { 
+        margin-right: 0;
+    }
+
+    .card2 {
+        margin-left: 0;
+    }
+
     .game-rules,
     #copyright {
         font-size: 13px;
@@ -469,7 +495,7 @@ footer img:hover {
         font-size: 14px;
     }
 
-    .mask,
+    .covid,
     #bottom-menu p,
     .f19 {
         font-size: 16px;
